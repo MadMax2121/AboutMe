@@ -20,7 +20,7 @@ export default function Header({}: Props) {
         scale: 1
     }}
     transition={{
-        duration: 1.2,
+        duration: 0.5,
     }}
     className='flex flex-row items-center'>
         
@@ -56,7 +56,7 @@ export default function Header({}: Props) {
         scale: 1
     }}
     transition={{
-        duration: 1.2
+        duration: 0.5
     }}
     className='flex flex-row items-center text-gray-300 cursor-pointer'>
         <SocialIcon
