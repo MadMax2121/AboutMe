@@ -51,11 +51,11 @@ function Projects({}: Props) {
                       whileInView={{opacity:1, y: 0}}
                       viewport={{once:true}}>
                     
-                        <Image className="bg-transparent" priority src = {project.image_url} width={project.image_width}
+                        <Image priority src = {project.image_url} width={project.image_width}
                          height={project.image_height} alt=""/>
                     </motion.div>
 
-                    <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
+                    <div className='space-y-5 lg:space-y-10 px-0 md:px-10 max-w-6xl'>
                         <h4 className='text-3xl font-semibold text-center'>
                             <span className='underline decoration-[#F7AB0A]/50'>
                                 Project {i + 1} of {projects.length}:

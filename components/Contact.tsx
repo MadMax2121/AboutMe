@@ -10,7 +10,7 @@ type Props = {}
 function Contact({ }: Props) {
     const sendEmail = (e) => {
         e.preventDefault();
-        alert("submitted");
+        alert("Thanks for sending an email!");
         emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, e.target, process.env.NEXT_PUBLIC_PUBLIC_KEY)
         
     }
