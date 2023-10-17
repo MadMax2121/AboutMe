@@ -4,7 +4,25 @@ import { motion } from 'framer-motion';
 type Props = {}
 
 function Projects({}: Props) {
-    const projects = [1,2,3,4,5];
+    
+    
+    const projects = [
+        {
+            title: "Job Finder",
+            description: "This project is an implementation of a superchat, where users can register their account on the platform and communitcate with each other in real time. I used React, Javascript, and CSS to design the front end, and Redux to implement the user authentication end. I also used Firebase to deploy the website.",
+            image_url: "https://i.postimg.cc/qB8yF0Bw/JOB-FINDER-free-file.png",
+            image_width: 250,
+            image_height: 243
+        },
+        {   title: "Personal Portfolio",
+            description: "This is the website! This encompasses my overall skills in web development, as well as just an overview into my professional life. I used Next JS and Tailwind to design this website. I also used multiple libraries like Framer Motion and Email JS to implement the email section.",
+            image_url: "https://i.postimg.cc/VLS5JrDD/new.png",
+            image_width: 400,
+            image_height: 214
+        }
+    ]
+
+    
   return (
     <motion.div 
       initial={{ opacity:0 }}
@@ -21,9 +39,10 @@ function Projects({}: Props) {
         z-20'>  {/* z-20 to come in front of the layering*/}
             
             {projects.map((project, i) => (
-                <div className='relative w-screen flex-shrink-0 snap-center flex flex-col space-y-5
-                     items-center justify-center p-20 md:p-24 h-screen'>
-                    <motion.div 
+                <div className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5
+                     items-center justify-center p-10 md:p-24 h-screen'>
+                    <motion.div
+                      
                       initial={{
                       y:-300,
                       opacity: 0
@@ -31,24 +50,21 @@ function Projects({}: Props) {
                       transition={{duration: 1.2}}
                       whileInView={{opacity:1, y: 0}}
                       viewport={{once:true}}>
-                        <Image priority src="https://i.postimg.cc/J7YgHWFW/IMG-1296-1.png" width={300} height={600}
-                        alt=""/>
+                    
+                        <Image className="bg-transparent" priority src = {project.image_url} width={project.image_width}
+                         height={project.image_height} alt=""/>
                     </motion.div>
 
                     <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
-                        <h4 className='text-4xl font-semibold text-center'>
+                        <h4 className='text-3xl font-semibold text-center'>
                             <span className='underline decoration-[#F7AB0A]/50'>
-                                Case Study {i + 1} of {projects.length}:
+                                Project {i + 1} of {projects.length}:
                             </span>{' '}
-                            UPS clone
+                                {project.title}
                         </h4>
 
-                        <p className='text-md text-center md:text-left'>
-                            hgou;bheubgufweghpf9uwhfvnwueyp9byp9qYRBPYVWEP G
-                            hgou;bheubgufweghpf9uwhfvnwueyp9byp9qYRBPYVWEP 
-                            hgou;bheubgufweghpf9uwhfvnwueyp9byp9qYRBPYVWEP G
-                            hgou;bheubgufweghpf9uwhfvnwueyp9byp9qYRBPYVWEP G
-                            hgou;bheubgufweghpf9uwhfvnwueyp9byp9qYRBPYVWEP G
+                        <p className='text-md md:text-2xl text-center'>
+                            {project.description}
                         </p>
                     </div>
                 </div>
