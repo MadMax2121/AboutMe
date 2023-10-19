@@ -14,3 +14,8 @@
         focus:text-[#f7AB0A]/40
     }
 }
+
+html {
+    --scroll-behavior: smooth!important;
+    scroll-behavior: smooth!important;
+    }

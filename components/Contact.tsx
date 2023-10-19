@@ -12,7 +12,7 @@ function Contact({ }: Props) {
         e.preventDefault();
         alert("Thanks for sending an email!");
         emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, e.target, process.env.NEXT_PUBLIC_PUBLIC_KEY)
-        
+
     }
     return (
         <div className='h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl
@@ -40,25 +40,25 @@ function Contact({ }: Props) {
 
                     <div className='flex items-center space-x-3 justify-center'>
                         <MapPinIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
-                        <p className='text-md'>51 Guild road</p>
+                        <p className='text-md'>100 Morrissey Blvd, Boston, MA</p>
                     </div>
                 </div>
 
                 <form onSubmit={sendEmail}
                     className='flex flex-col space-y-2 w-auto mx-auto'>
                     <div className='flex space-x-2'>
-                        <input placeholder='Name' className="contactInput"  name = "from_name" type="text" />
-                        <input placeholder="Email" className="contactInput" name = "email_from" type="email" />
+                        <input placeholder='Name' className="contactInput" name="from_name" type="text" />
+                        <input placeholder="Email" className="contactInput" name="email_from" type="email" />
                     </div>
 
-                    <input   placeholder="Subject" className="contactInput" name= "subject" type="text" />
+                    <input placeholder="Subject" className="contactInput" name="subject" type="text" />
 
-                    <textarea placeholder="Message" name = "message" className="contactInput" />
+                    <textarea placeholder="Message" name="message" className="contactInput" />
                     <button type="submit" className='bg-[#f7Ab0A] py-2 lg:p-5 px-10 rounded-md text-black font-bold
                 text-lg'>Submit</button>
                 </form>
             </div>
-        
+
         </div>
     )
 }
