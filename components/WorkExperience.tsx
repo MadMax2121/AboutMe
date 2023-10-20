@@ -4,12 +4,12 @@ import ExpCard from './ExpCard'
 
 type Props = {}
 
-function WorkExperience({}: Props) {
+function WorkExperience({ }: Props) {
   return (
-    <motion.div 
-      initial={{ opacity: 0}}
-      whileInView = {{ opacity: 1}}
-      transition={{duration: 1.5}}
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
       className='h-screen flex relative overflow-hidden flex-col text-left md:flex-row max-w-full
       px-10 justify-evenly mx-auto items-center'>
 
@@ -17,11 +17,13 @@ function WorkExperience({}: Props) {
         Experience
       </h3>
 
-      <div className='scrollbar scroll-smooth scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory'>
-        <ExpCard/>
-        <ExpCard/>
-        <ExpCard/>
-        <ExpCard/>
+      <div className='h-[550px] scrollbar scroll-smooth scrollbar-track-gray-400/20
+       scrollbar-thumb-[#F7AB0A]/80 w-full flex space-x-5 overflow-x-scroll 
+       pt-24 snap-x snap-mandatory'>
+        <ExpCard />
+        <ExpCard />
+        <ExpCard />
+        <ExpCard />
       </div>
 
 

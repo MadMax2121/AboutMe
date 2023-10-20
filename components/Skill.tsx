@@ -14,7 +14,7 @@ function Skill({ directionLeft, image, percent }: Props) {
     <div className='group relative flex cursor-pointer'>
       <motion.div
         initial={{
-          x: directionLeft ? -200 : 200,
+          x: directionLeft ? -150 : 150,
           opacity: 0
         }}
         transition={{ duration: 1 }}

@@ -34,7 +34,6 @@ function Projects({ }: Props) {
             <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
                 Projects
             </h3>
-
             <div className=' scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 
         relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory
         z-20'>  {/* z-20 to come in front of the layering*/}
@@ -44,7 +43,7 @@ function Projects({ }: Props) {
                      items-center justify-center p-10 md:p-24 h-screen'>
                         <motion.div
                             initial={{
-                                y: -300,
+                                y: -400,
                                 opacity: 0
                             }}
                             transition={{ duration: 1.2 }}
