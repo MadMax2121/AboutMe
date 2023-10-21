@@ -10,6 +10,7 @@ import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import { ArrowUpCircleIcon } from '@heroicons/react/20/solid';
+import Link from 'next/link';
 
 
 
@@ -48,14 +49,14 @@ const Home: NextPage = () => {
         <Contact/> 
       </section>
 
-      <a href="/#hero">
+      <Link href="/#hero">
         <footer className='sticky bottom-5 w-full cursor-pointer'>
           <div className='flex items-center justify-center'>
             <ArrowUpCircleIcon className='h-10 w-10 rounded-full
               cursor-pointer'/>
           </div>
         </footer>
-     </a>
+     </Link>
       
     </div>
   );
