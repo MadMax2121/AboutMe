@@ -45,6 +45,7 @@ z-20'> {/* z-20 to come in front of the layering*/}
 
 
                 {projects.map((project, i) => (
+                    // eslint-disable-next-line react/jsx-key
                     <div className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5
 items-center justify-center p-10 md:p-24 h-screen'>
                         <motion.div

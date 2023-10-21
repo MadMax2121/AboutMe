@@ -51,7 +51,8 @@ function ExpCard({ }: Props) {
   return (
     <>
       {jobs.map((job) => (
-        <article className="scroll-smooth scrollbar-track-gray-400/20
+        // eslint-disable-next-line react/jsx-key
+        <article  className="scroll-smooth scrollbar-track-gray-400/20
         scrollbar-thumb-[#F7AB0A]/80 scrollbar-thin flex overflow-scroll overflow-x-hidden flex-col rounded-lg items-center space-y-10 flex-shrink-0
         w-[400px] h-[400px] md:w-[600px] xl:w-[700px] snap-center ring-offset-2 bg-[#292929] p-10
         hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 ">
@@ -72,16 +73,6 @@ function ExpCard({ }: Props) {
           <div className='px-0 md:px-10'>
             <h4 className='text-xl font-bold text-[#F7AB0A]/80'>{job.title}</h4>
             <p className='font-soft text-lg font-bold mt-1'>{job.location}</p>
-
-
-            {/*
-<div className='flex space-x-2 my-2 '>
-<Image className='rounded-full' priority height={50} width= {50} src="https://i.postimg.cc/J7YgHWFW/IMG-1296-1.png" alt=""/>
-<Image className='rounded-full' priority height={50} width= {50} src="https://i.postimg.cc/J7YgHWFW/IMG-1296-1.png" alt=""/>
-<Image className='rounded-full' priority height={50} width= {50} src="https://i.postimg.cc/J7YgHWFW/IMG-1296-1.png" alt=""/>
-</div>
-*/}
-
 
             <p>{job.date}</p>
 

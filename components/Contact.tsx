@@ -22,9 +22,9 @@ function Contact({ }: Props) {
             </h3>
 
             <div className='flex flex-col space-y-5 '>
-                <h4 className=' pt-20 xl:pt-20 text-xl xl:text-2xl font-semibold text-center'>
-                    I've got just what you need.{" "}
-                    <span className='decoration-[#F7AB0A] /50 underline'>Let's Talk</span>
+                <h4 className='pt-20 xl:pt-20 text-xl xl:text-2xl font-semibold text-center'>
+                    I&apos;ve got just what you need.{" "}
+                    <span className='decoration-[#F7AB0A] /50 underline'>Let&apos;s Talk</span>
                 </h4>
 
                 <div className='space-y-3 xl-space-y-6'>
