@@ -51,9 +51,10 @@ function ExpCard({ }: Props) {
   return (
     <>
       {jobs.map((job) => (
-        <article className=" flex overflow-scroll flex-col rounded-lg items-center space-y-10 flex-shrink-0
-w-[400px] h-[400px] md:w-[600px] xl:w-[700px] snap-center ring-offset-2 bg-[#292929] p-10
-hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 ">
+        <article className="scroll-smooth scrollbar-track-gray-400/20
+        scrollbar-thumb-[#F7AB0A]/80 scrollbar-thin flex overflow-scroll overflow-x-hidden flex-col rounded-lg items-center space-y-10 flex-shrink-0
+        w-[400px] h-[400px] md:w-[600px] xl:w-[700px] snap-center ring-offset-2 bg-[#292929] p-10
+        hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 ">
           <motion.div
             initial={{
               y: -100,
