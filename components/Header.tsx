@@ -4,14 +4,13 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 
-
-
 type Props = {}
+
 
 export default function Header({ }: Props) {
   return (
     <header className='sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20
-    xl:items-center'> {/* has a max width constraint, and mx=auto automatically applies left and right margins on left and right axis*/}
+xl:items-center'> {/* has a max width constraint, and mx=auto automatically applies left and right margins on left and right axis*/}
       <motion.div
         initial={{
           x: -500,
@@ -28,25 +27,29 @@ export default function Header({ }: Props) {
         }}
         className='flex flex-row items-center'>
 
+
         {/* Social Icons*/}
-        <SocialIcon url="https://twitter.com"
+        <SocialIcon url="https://github.com/MadMax2121"
           fgColor="gray"
           bgColor='transparent'
           target="_blank"
         />
 
-        <SocialIcon url="https://twitter.com"
+
+        <SocialIcon url="https://www.instagram.com/madmax_2121/"
           fgColor="gray"
           bgColor='transparent'
           target="_blank"
         />
 
-        <SocialIcon url="https://twitter.com"
+
+        <SocialIcon url="https://www.youtube.com/channel/UC3EVt0qrYhW3WAtpN2cwTEwm"
           fgColor="gray"
           bgColor='transparent'
           target="_blank"
         />
       </motion.div>
+
 
       <Link href="#contact" legacyBehavior>
         <motion.div
@@ -63,8 +66,8 @@ export default function Header({ }: Props) {
           transition={{
             duration: 0.5
           }}
-          className='flex flex-row items-center text-gray-300 
-        cursor-pointer'>
+          className='flex flex-row items-center text-gray-300
+cursor-pointer'>
           <SocialIcon
             className="cursor-pointer"
             network="email"
@@ -72,13 +75,17 @@ export default function Header({ }: Props) {
             bgColor='transparent'
           />
 
+
           <p className='uppercase md:inline-flex text-sm text-gray-400'>Get in Touch
           </p>
 
+
           {/* Hidden on mobile, when on a medium screen show on flex*/}
+
 
         </motion.div>
       </Link>
+
 
     </header>
   );
