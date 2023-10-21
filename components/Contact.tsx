@@ -12,7 +12,7 @@ function Contact({ }: Props) {
     const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         alert("Thanks for sending an email!");
-        emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID!, process.env.NEXT_PUBLIC_TEMPLATE_ID!, e.target, process.env.NEXT_PUBLIC_PUBLIC_KEY!)
+        emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID!, process.env.NEXT_PUBLIC_TEMPLATE_ID!, e.currentTarget, process.env.NEXT_PUBLIC_PUBLIC_KEY!)
 
     }
     return (
