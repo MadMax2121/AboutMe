@@ -6,13 +6,10 @@ type Props = {}
 
 function Projects({ }: Props) {
 
-
-
-
     const projects = [
         {
             title: "Job Finder",
-            description: "This project is an implementation of a superchat, where users can register their account on the platform and communitcate with each other in real time. I used React, Javascript, and CSS to design the front end, and Redux to implement the user authentication end. I also used Firebase to deploy the website.",
+            description: "This project is an implementation of a superchat, where users can register their account on the platform and communitcate with each other in real time. I used React, Javascript, and CSS to design the front end, and Redux to implement the user authentication end. I also used Firebase to deploy the website. ",
             image_url: "https://i.postimg.cc/qB8yF0Bw/JOB-FINDER-free-file.png",
             image_width: 250,
             image_height: 243
@@ -23,12 +20,23 @@ function Projects({ }: Props) {
             image_url: "https://i.postimg.cc/VLS5JrDD/new.png",
             image_width: 327,
             image_height: 175
+        },
+        {
+            title: "Face Recognition Software",
+            description: "This Machine Learning project is a face recognition tool that compares the faces in the webcam of the device to the given list of \"known\" people, and prints out the confidence value of that match. I used OpenCV and Python in order to implement this tool. ",
+            image_url: "/images/face.jpeg",
+            image_width: 200,
+            image_height: 200
         }
     ]
-
-
-
-
+    {/*
+    const link = (value) => ({
+        if (value) {
+            <a href="jobfinder-e8577.web.app/" className="font-medium text-blue-600 underline dark:text-blue-500 hover:no-underline">roadmap</a>
+        }
+        return
+    })
+    */}
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -58,7 +66,7 @@ items-center justify-center p-10 md:p-24 h-screen'>
                             viewport={{ once: true }}>
 
 
-                            <Image priority src={project.image_url} width={project.image_width}
+                            <Image priority className="rounded-md" src={project.image_url} width={project.image_width}
                                 height={project.image_height} alt="" />
                         </motion.div>
 
