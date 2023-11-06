@@ -43,7 +43,7 @@ xl:items-center'> {/* has a max width constraint, and mx=auto automatically appl
         />
 
 
-        <SocialIcon url="https://www.youtube.com/channel/UC3EVt0qrYhW3WAtpN2cwTEwm"
+        <SocialIcon url="https://www.youtube.com/channel/UC3EVt0qrYhW3WAtpN2cwTEw"
           fgColor="gray"
           bgColor='transparent'
           target="_blank"

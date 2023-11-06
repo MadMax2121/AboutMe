@@ -49,7 +49,7 @@ const Home: NextPage = () => {
         <Contact/> 
       </section>
 
-      <Link href="/#hero">
+      <Link href="#hero">
         <footer className='sticky bottom-5 w-full cursor-pointer'>
           <div className='flex items-center justify-center'>
             <ArrowUpCircleIcon className='h-10 w-10 rounded-full
