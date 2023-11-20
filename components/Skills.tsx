@@ -21,7 +21,7 @@ function Skills({ }: Props) {
       </h3>
 
       <div className='grid grid-cols-3 gap-5'>
-        <Skill directionLeft={true} image={"/images/python.svg"} percent={"70%"} />
+        <Skill directionLeft={true} image={"/images/python.svg"} percent={"70%"}  />
         <Skill directionLeft={true} image={"/images/java.svg"} percent={"80%"} />
         <Skill directionLeft={false} image={"/images/c-plusplus.svg"} percent={"75%"} />
         <Skill directionLeft={true} image={"/images/javascript.svg"} percent={"70%"} />

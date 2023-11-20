@@ -14,14 +14,14 @@ function Skill({ directionLeft, image, percent }: Props) {
     <div className='group relative flex cursor-pointer'>
       <motion.div
         initial={{
-          x: directionLeft ? -150 : 150,
+          x: directionLeft ? -100 : 100,
           opacity: 0
         }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1.5 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
       >
-        <div className='relative h-20 w-20 rounded-full border border-gray-500 object-cover md:w-24 md:h-24 xl:w-28 xl:h-28
+        <div className='relative h-20 w-20 rounded-full border border-gray-500 object-cover xs:w-12 xs:h-12 md:w-24 md:h-24 xl:w-28 xl:h-28
           filter group-hover:grayscale transition duration-300 ease-in-out'>
           <Image className='rounded-full' priority src={image} alt="" layout="fill" />
 
