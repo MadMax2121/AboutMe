@@ -2,6 +2,7 @@ import React from 'react'
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import EmailIcon from '@mui/icons-material/Email';
 
 
 type Props = {}
@@ -51,9 +52,8 @@ xl:items-center'> {/* has a max width constraint, and mx=auto automatically appl
       </motion.div>
 
 
-      <Link href="#contact" legacyBehavior>
-        <motion.div
-          initial={{
+      <motion.a href="#contact"
+         initial={{
             x: 500,
             opacity: 0,
             scale: 0.5
@@ -68,23 +68,15 @@ xl:items-center'> {/* has a max width constraint, and mx=auto automatically appl
           }}
           className='flex flex-row items-center text-gray-300
 cursor-pointer'>
-          <SocialIcon
-            className="cursor-pointer"
-            network="email"
-            fgColor='gray'
-            bgColor='transparent'
-          />
-
-
+          
+          <EmailIcon className = "mr-1 text-gray-400"/>
           <p className='uppercase md:inline-flex text-sm text-gray-400'>Get in Touch
           </p>
 
 
           {/* Hidden on mobile, when on a medium screen show on flex*/}
 
-
-        </motion.div>
-      </Link>
+      </motion.a>
 
 
     </header>

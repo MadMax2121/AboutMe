@@ -29,7 +29,7 @@ text-center md:text-left md:flex-row max-w-7xl px-10 justify-center space-y-5 mx
                 viewport={{ once: true }}
                 className='relative w-[175px] h-[175px] mt-20 md:mb-0 object-cover flex-shrink-0
 md:rounded-lg md:w-[250px] md:h-[333px] xl:w-[300px] xl:h-[400px]'>=
-                <Image className='rounded-full md:rounded-none' priority src="https://i.postimg.cc/4yTzQ876/IMG-3099.jpg" alt="" layout='fill' />
+                <Image className='rounded-full md:rounded-none' priority src="/images/profile_pic.jpg" alt="" layout='fill' />
             </motion.div>
             <div className='space-y-3 md:space-y-10 px-0 md:px-10'>
                 <h4 className='text-4xl font-semibold'>
