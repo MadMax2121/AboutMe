@@ -37,9 +37,9 @@ md:rounded-lg md:w-[250px] md:h-[333px] xl:w-[300px] xl:h-[400px]'>=
                     <span className='underline decoration-[#F7AB0A]/50'>little</span>{" "}background
                 </h4>
                 <p className=" dark:text-black xl:text-lg lg:text-lg md:text-sm xs:text-xs">
-                    Hey there! My name is Max, and I am currently a sophomore at UMASS Boston, and I am majoring
-                    in computer science. I love to play video games, hangout with friends, and code in my spare time.
-                    This webiste is one of my most beloved projects, because it shows my knowledge in Typescript and Tailwind.
+                    Hey there! My name is Max, and I am a Junior at UMASS Boston, and I am majoring
+                    in Computer Science. I love playing video games, hanging out with friends, and coding in my spare time.
+                    This webiste is one of my most beloved projects, because it shows my knowledge of Typescript and Tailwind.
                     Please do not hesitate to contact me by scrolling to the botoom or pressing the &quot;GET IN TOUCH&quot; button in the
                     top right corner of the screen.
                 </p>

@@ -96,8 +96,8 @@ items-center justify-center p-10 md:p-24 h-screen'>
             </div>
 
 
-            <div className='w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px]
--skew-y-12'>
+            <div className='w-full absolute top-[28%] bg-[#F7AB0A]/10 dark:bg-[rgb(36,36,36)] left-0 h-[550px]
+-skew-y-12 '>
             </div>
         </motion.div>
     )
