@@ -27,26 +27,26 @@ function Hero({ }: Props) {
       </div>
 
       <div className='z-20'>
-        <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px] font-bold">
+        <h2 className="text-sm uppercase dark:text-black text-custom-gray pb-2 tracking-[15px] font-bold">
           Software engineer
         </h2>
         <h1 className='text-5xl lg:text-6xl font-semibold px-10'>
-          <span className='mr-3'>{text}</span>
+          <span className='dark:text-black mr-3'>{text}</span>
           <Cursor cursorColor='#F7AB0A' />
         </h1>
 
-        <div className='pt-5'>
+        <div className=' pt-5'>
           <a href="#about">
-            <button className='heroButton'>About</button>
+            <button className='dark:text-black dark:hover:border-black dark:hover:bg-[rgb(36, 36, 36)] text-custom-gray dark:heroButton dark:border-[rgb(250,249,246)] heroButton'>About</button>
           </a>
           <a href="#experience" >
-            <button className='heroButton'>Experience</button>
+            <button className='dark:text-black text-custom-gray dark:heroButton dark:border-[rgb(250,249,246)] heroButton'>Experience</button>
           </a>
           <a href="#skills">
-            <button className='heroButton'>Skills</button>
+            <button className=' dark:text-black text-custom-gray dark:heroButton dark:border-[rgb(250,249,246)] heroButton'>Skills</button>
           </a>
           <a href="#projects" >
-            <button className='heroButton'>Projects</button>
+            <button className='dark:text-black text-custom-gray dark:heroButton dark:border-[rgb(250,249,246)] heroButton'>Projects</button>
           </a>
         </div>
       </div>

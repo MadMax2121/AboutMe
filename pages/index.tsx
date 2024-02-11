@@ -17,7 +17,7 @@ import Link from 'next/link';
 //const inter = Inter({ subsets: ['latin'] })
 const Home: NextPage = () => {
   return (
-    <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory  
+    <div className='bg-[rgb(36,36,36)] dark:bg-[rgb(250,249,246)] text-white h-screen snap-y snap-mandatory  
     overflow-y-scroll z-0 overflow-x-hidden scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 scroll-smooth'>
       <Head>
         <title>Max&apos;s Portfolio</title>
@@ -32,7 +32,6 @@ const Home: NextPage = () => {
         <About/>
       </section>
 
-      
       <section id="experience" className='snap-center'>
         <WorkExperience/>
       </section>

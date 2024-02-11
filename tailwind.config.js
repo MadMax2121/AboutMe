@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
@@ -7,7 +8,7 @@ module.exports = {
   theme: {
     screens: {
       
-      'xs': {'raw': '(min-height: 667px),(min-width:375x)'},
+      'xs': {'raw': '(min-height: 667px),(min-width:375px)'},
 
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
@@ -24,7 +25,12 @@ module.exports = {
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
     },
-    extend: {},
+    extend: {
+      colors: {
+        'custom-gray': '#848484'
+      }
+    }
+
   },
   plugins: [require("tailwind-scrollbar")],
 };
