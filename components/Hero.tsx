@@ -38,19 +38,19 @@ function Hero({ }: Props) {
         <div className='pt-5'>
           <a href="#about">
             <button className=' xs:px-3 xs:py-2 pyduration-200 dark:text-black dark:hover:border-black dark:hover:bg-[rgb(36, 36, 36)] text-custom-gray  px-6 py-2 border border-[#242424] rounded-full uppercase text-xs font-semibold 
-        tracking-widest transition-all hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40 dark:border-[rgb(250,249,246)] '>About</button>
+        md:tracking-widest xs:tracking-normal transition-all hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40 dark:border-[rgb(250,249,246)] '>About</button>
           </a>
           <a href="#experience" >
             <button className=' xs:px-3 xs:py-2 duration-200 dark:text-black dark:hover:border-black dark:hover:bg-[rgb(36, 36, 36)] text-custom-gray  px-6 py-2 border border-[#242424] rounded-full uppercase text-xs font-semibold 
-        tracking-widest transition-all hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40 dark:border-[rgb(250,249,246)] '>Experience</button>
+        md:tracking-widest xs:tracking-normal transition-all hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40 dark:border-[rgb(250,249,246)] '>Experience</button>
           </a>
           <a href="#skills">
             <button className=' xs:px-3 xs:py-2 duration-200 dark:text-black dark:hover:border-black dark:hover:bg-[rgb(36, 36, 36)] text-custom-gray  px-6 py-2 border border-[#242424] rounded-full uppercase text-xs font-semibold 
-        tracking-widest transition-all hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40 dark:border-[rgb(250,249,246)] '>Skills</button>
+        md:tracking-widest xs:tracking-normal transition-all hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40 dark:border-[rgb(250,249,246)] '>Skills</button>
           </a>
           <a href="#projects" >
             <button className=' xs:px-3 xs:py-2 duration-200 dark:text-black dark:hover:border-black dark:hover:bg-[rgb(36, 36, 36)] text-custom-gray  px-6 py-2 border border-[#242424] rounded-full uppercase text-xs font-semibold 
-        tracking-widest transition-all hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40 dark:border-[rgb(250,249,246)] '>Projects</button>
+        md:tracking-widest xs:tracking-normal transition-all hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40 dark:border-[rgb(250,249,246)] '>Projects</button>
           </a>
         </div>
       </div>
