@@ -51,7 +51,7 @@ const Home: NextPage = () => {
       <Link href="#hero">
         <footer className='sticky bottom-5 w-full cursor-pointer'>
           <div className='flex items-center justify-center'>
-            <ArrowUpCircleIcon className='h-10 w-10 dark:invert dark:mb-16 rounded-full
+            <ArrowUpCircleIcon className='h-10 w-10 dark:invert xs:mb-16 rounded-full
               cursor-pointer'/>
           </div>
         </footer>
