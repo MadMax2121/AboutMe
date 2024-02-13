@@ -27,7 +27,7 @@ text-center md:text-left md:flex-row max-w-7xl px-10 justify-center space-y-5 mx
                 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className='relative w-[175px] h-[175px] mt-20 md:mb-0 object-cover flex-shrink-0
+                className='relative w-[190px] h-[210px] mt-20 md:mb-0 object-cover flex-shrink-0
 md:rounded-lg md:w-[250px] md:h-[333px] xl:w-[300px] xl:h-[400px]'>=
                 <Image className='rounded-full md:rounded-sm' priority src="/images/profile_pic.jpg" alt="" layout='fill' />
             </motion.div>
