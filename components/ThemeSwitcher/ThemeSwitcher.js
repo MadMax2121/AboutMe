@@ -1,19 +1,35 @@
-
-import React, { useState } from "react";
+'use client'
+import React, { useState, useEffect } from "react";
 import styles from './ThemeSwitcher.module.css';
 
 function ThemeSwitcher() {
-  // State to track whether the theme is dark (true) or light (false)
-  const [isDark, setIsDark] = useState(true);
+  // Initialize the theme state based on what's stored in localStorage or default to true (dark theme)
+  const [isDark, setIsDark] = useState(() => {
+    // Check if window is defined (i.e., are we running in the browser?)
+    if (typeof window !== "undefined") {
+      const savedTheme = localStorage.getItem("theme");
+      return savedTheme ? savedTheme === "dark" : true;
+    }
+    // Default to true if not in browser
+    return true;
+  });
 
-  // Handler for the checkbox change event
+  useEffect(() => {
+    // Ensure window is defined before using localStorage
+    if (typeof window !== "undefined") {
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    }
+  }, [isDark]); // Dependency array, re-run effect when isDark changes
+
   const toggleTheme = () => {
     setIsDark(!isDark); // Toggle the theme
+    // Persist theme selection in localStorage, ensuring window is defined
+    if (typeof window !== "undefined") {
+      localStorage.setItem("theme", !isDark ? "dark" : "light");
+    }
   };
 
-  // Conditional class for the theme background color
   const themeClass = isDark ? styles.darkTheme : styles.lightTheme;
-
   return (
     <div className={`${styles.theme} ${themeClass}`}>
       <input
