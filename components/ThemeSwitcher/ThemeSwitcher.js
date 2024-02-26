@@ -1,4 +1,3 @@
-'use client'
 import React, { useState, useEffect } from "react";
 import styles from './ThemeSwitcher.module.css';
 
@@ -27,7 +26,7 @@ function ThemeSwitcher() {
   };
 
   const themeClass = isDark ? styles.darkTheme : styles.lightTheme;
-  
+
   return (
     <div className={`${styles.theme} ${themeClass}`}>
       <input
