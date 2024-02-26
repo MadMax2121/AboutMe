@@ -4,32 +4,30 @@ import styles from './ThemeSwitcher.module.css';
 
 function ThemeSwitcher() {
   // Initialize the theme state based on what's stored in localStorage or default to true (dark theme)
-  const [isDark, setIsDark] = useState(() => {
-    // Check if window is defined (i.e., are we running in the browser?)
+   // State initialization
+   const [isDark, setIsDark] = useState(() => {
+    // Safe check for accessing window object
     if (typeof window !== "undefined") {
+      // Try to read the theme from localStorage
       const savedTheme = localStorage.getItem("theme");
-      return savedTheme ? savedTheme === "dark" : true;
+      return savedTheme === "dark" ? true : false; // Convert to boolean
     }
-    // Default to true if not in browser
-    return true;
+    return true; // Default to dark theme if window is not available
   });
 
   useEffect(() => {
-    // Ensure window is defined before using localStorage
+    // Persist theme changes to localStorage
     if (typeof window !== "undefined") {
       localStorage.setItem("theme", isDark ? "dark" : "light");
     }
-  }, [isDark]); // Dependency array, re-run effect when isDark changes
+  }, [isDark]);
 
   const toggleTheme = () => {
-    setIsDark(!isDark); // Toggle the theme
-    // Persist theme selection in localStorage, ensuring window is defined
-    if (typeof window !== "undefined") {
-      localStorage.setItem("theme", !isDark ? "dark" : "light");
-    }
+    setIsDark(!isDark);
   };
 
   const themeClass = isDark ? styles.darkTheme : styles.lightTheme;
+  
   return (
     <div className={`${styles.theme} ${themeClass}`}>
       <input
