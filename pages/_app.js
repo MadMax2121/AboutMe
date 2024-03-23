@@ -1,31 +1,42 @@
 import App from 'next/app';
 import React from 'react';
+import cookie from 'cookie'; // you may need to install the 'cookie' library
 
 class MyApp extends App {
-  // This function runs only on the client, immediately after initial rendering.
-  // It ensures that your theme setting is applied before your app is interactive.
-  componentDidMount() {
-    this.applyTheme();
-  }
+  static async getInitialProps({ Component, ctx }) {
+    let pageProps = {};
+    let theme = 'light'; // default theme
 
-  // This function can be used to apply the theme from localStorage, if it exists.
-  applyTheme = () => {
-    // Check for the theme in localStorage
-    const theme = localStorage.getItem('color-theme');
-
-    // If there's a theme set in localStorage, use it
-    if (theme) {
-      document.body.className = theme; // This assumes you change themes by changing the class on the body
-    } else {
-      // If not, set a default theme and store it in localStorage for the next time
-      const defaultTheme = 'light'; // Replace with your default theme if different
-      document.body.className = defaultTheme;
-      localStorage.setItem('color-theme', defaultTheme);
+    if (Component.getInitialProps) {
+      pageProps = await Component.getInitialProps(ctx);
     }
+
+    // Check if there is a request (server-side)
+    if (ctx.req) {
+      // Get cookies from request
+      const cookies = ctx.req.headers.cookie;
+      if (cookies) {
+        const parsedCookies = cookie.parse(cookies);
+        theme = parsedCookies['color-theme'] || theme; // Use cookie value if it exists
+      }
+    } else {
+      // We are client-side, persist the theme in cookies
+      const cookies = document.cookie;
+      const parsedCookies = cookie.parse(cookies);
+      theme = parsedCookies['color-theme'] || theme; // Use cookie value if it exists
+    }
+
+    // Set the cookie with the theme if it's not present
+    if (ctx.res && !ctx.req.headers.cookie?.includes('color-theme')) {
+      ctx.res.setHeader('Set-Cookie', `color-theme=${theme}; path=/;`);
+    }
+
+    return { pageProps, theme };
   }
 
   render() {
     const { Component, pageProps } = this.props;
+    // Pass down the theme from the props to your component
     return <Component {...pageProps} />;
   }
 }
