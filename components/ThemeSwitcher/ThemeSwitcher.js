@@ -1,19 +1,15 @@
 
 import React, { useState } from "react";
 import styles from './ThemeSwitcher.module.css';
+import { useEffect } from "react";
 
 function ThemeSwitcher() {
-  // State to track whether the theme is dark (true) or light (false)
-  const [isDark, setIsDark] = useState(true);
+  // Determine the current theme by checking the document's body class
+  const isDark = document.body.dataset.theme === 'dark';
 
-  // Handler for the checkbox change event
-  const toggleTheme = () => {
-    setIsDark(!isDark); // Toggle the theme
-  };
-
-  // Conditional class for the theme background color
-  const themeClass = isDark ? styles.darkTheme : styles.lightTheme;
-
+    // Initial theme state is set based on the theme saved in localStorage, defaulting to 'dark'
+   
+  
   return (
     <div className={`${styles.theme} ${themeClass}`}>
       <input

@@ -22,7 +22,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Max&apos;s Portfolio</title>
       </Head>
-        <Header />
+        <Header/>
 
       <section id="hero" className='snap-start'> 
         <Hero />
