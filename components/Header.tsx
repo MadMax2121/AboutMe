@@ -14,21 +14,6 @@ type Props = {}
 
 export default function Header({ }: Props) {
 
-  const [darkModeApplied, setDarkModeApplied] = useState(false);
-
-  const handleTheme = () => {
-    const currentTheme = localStorage.getItem('theme') || 'dark'; // Default to dark mode if not set
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-    document.documentElement.classList.toggle('dark', newTheme === 'dark');
-    localStorage.setItem('theme', newTheme);
-    setDarkModeApplied(newTheme === 'dark');
-  };
-
-  useEffect(() => {
-    handleTheme();
-  }, []); // Run only on mount
-
   return (
     <header className='sticky top-0 p-5 flex items-center max-w-7xl mx-auto z-20
 xl:items-center '> {/* has a max width constraint, and mx=auto automatically applies left and right margins on left and right axis*/}
@@ -81,7 +66,7 @@ xl:items-center '> {/* has a max width constraint, and mx=auto automatically app
         }}
         className='ml-auto flex flex-row items-center text-gray-900
       cursor-pointer'>
-        <button  onClick={handleTheme}><ThemeSwitcher /></button>
+       <div><ThemeSwitcher /></div>
       </motion.div>
       <motion.a href="#contact"
         initial={{
