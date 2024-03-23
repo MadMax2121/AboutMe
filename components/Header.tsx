@@ -14,6 +14,22 @@ type Props = {}
 
 export default function Header({ }: Props) {
 
+  const toggleTheme = () => {
+    // Assuming "light" and "dark" are the values used for theme toggling
+    const currentTheme = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
+   
+    localStorage.setItem('theme', currentTheme); // Update the correct localStorage key
+    document.body.dataset.theme = currentTheme; // Optionally, use this for CSS selectors
+ 
+ 
+    // If you're using Tailwind's `class` mode for dark mode, toggle the class on <html> or <body>
+    if (currentTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  };
+ 
   return (
     <header className='sticky top-0 p-5 flex items-center max-w-7xl mx-auto z-20
 xl:items-center '> {/* has a max width constraint, and mx=auto automatically applies left and right margins on left and right axis*/}
@@ -66,7 +82,7 @@ xl:items-center '> {/* has a max width constraint, and mx=auto automatically app
         }}
         className='ml-auto flex flex-row items-center text-gray-900
       cursor-pointer'>
-       <div><ThemeSwitcher /></div>
+       <button onClick={toggleTheme}><ThemeSwitcher /></button>
       </motion.div>
       <motion.a href="#contact"
         initial={{
