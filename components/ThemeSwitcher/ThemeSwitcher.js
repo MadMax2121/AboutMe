@@ -8,7 +8,7 @@ function ThemeSwitcher() {
     // Safe check for accessing window object
     if (typeof window !== "undefined") {
       // Try to read the theme from localStorage
-      const savedTheme = localStorage.getItem("theme");
+      const savedTheme = localStorage.getItem("color-theme");
       return savedTheme === "dark" ? true : false; // Convert to boolean
     }
     return true; // Default to dark theme if window is not available
@@ -17,7 +17,7 @@ function ThemeSwitcher() {
   useEffect(() => {
     // Persist theme changes to localStorage
     if (typeof window !== "undefined") {
-      localStorage.setItem("theme", isDark ? "dark" : "light");
+      localStorage.setItem("color-theme", isDark ? "dark" : "light");
     }
   }, [isDark]);
 

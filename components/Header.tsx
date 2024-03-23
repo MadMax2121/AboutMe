@@ -17,11 +17,11 @@ export default function Header({ }: Props) {
   const [darkModeApplied, setDarkModeApplied] = useState(false);
 
   const handleTheme = () => {
-    const currentTheme = localStorage.getItem('color-theme') || 'dark'; // Default to dark mode if not set
+    const currentTheme = localStorage.getItem('theme') || 'dark'; // Default to dark mode if not set
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
     document.documentElement.classList.toggle('dark', newTheme === 'dark');
-    localStorage.setItem('color-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
     setDarkModeApplied(newTheme === 'dark');
   };
 
