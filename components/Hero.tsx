@@ -22,7 +22,7 @@ function Hero({ }: Props) {
 
       <div className='relative h-36 w-36'>
         <Image className="rounded-full mx-auto object-cover"
-          priority src="https://i.postimg.cc/J7YgHWFW/IMG-1296-1.png" alt="" layout="fill"
+          priority src="/images/italy_pic.jpg" fill={true} alt=""
         />
       </div>
 

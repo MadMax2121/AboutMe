@@ -14,33 +14,38 @@ function ExpCard({ }: Props) {
 
 
   const jobs = [
+    
     {
-      title: "Software Engineering Internship",
-      url: "/images/rocket.png",
-      location: "Mission Space, Boston, MA",
-      date: "05/2023 - 08/2023",
-      li1: "Used Arduino IDE to program the sensors, accelerometers and gyroscopes of a small satellite (1U CubeSat) that launched 10km into space.",
-      li2: "Created a program using C++ to analyze and store the data from the satellite on an SD card, including data from a Geiger counter, which calculates nearby radiation in the satellite.",
-      li3: "Utilized JavaScript to display information about the satellite on a screen, such as its location and current temperature, maximizing the efficiency of the device while in space.",
-      width: 96,
-      height: 144
+      title: "Software Engineer",
+      url: "/images/granite-logo.png",
+      light_url: "/images/granite-logo.png",
+      location: "Granite Telecommunications, Quincy, MA",
+      date: "June 2024 - Current",
+      li1: "Created IoT Core events and updated AWS Lambda to display current statuses of devices in a centralized webapp, easing the troubleshooting process for 1000+ customers.",
+      li2: "Redesigned the whole interface for a customer-based webapp using Next.Js and Tailwind, set up API calls and routes to display a json configuration of a device, as well as pushed updated data models to the DynamoDB database, optimizing data storage by 20%.",
+      li3: "Integrated Okta login with the application, providing seamless scalability and management for 100+ users in the company.",
+      li4: "Containerized and deployed the application with Docker and Kubernetes, optimizing resource utilization by 40% and load balancing in clusters to enhance performance and reliability.",
+      width: 300,
+      height: 300
     },
     {
-      title: "IT Maintenance",
-      url: "/images/job.png",
-      location: "Enrollment Management, UMASS Boston, MA",
-      date: "8/2022 - 5/2023",
-      li1: "Created a program using Java to manage and display 100+ items of inventory in a sleek fashion, where users can add and remove data.",
-      li2: "Maintained and set up 50+ workstations for new employees and helped them set up their technological environment in the workspace.",
-      li3: "Handled up to 5 customer service issues a day relating to computer problems, from hardware to setting up the computer onto the domain, as well as recovering/backing up devices.",
-      width: 150,
+      title: "Software Engineering Internship",
+      url: "/images/mission-space-dark.png",
+      light_url: "/images/mission-space-light.png",
+      location: "Mission Space, Boston, MA",
+      date: "May 2023 - August 2023",
+      li1: "Performed firmware updates and pushed code into a small satellite, which optimized flight performance by 20%.",
+      li2: "Used Arduino IDE to program the sensors, accelerometers, and gyroscopes of a small satellite (1U CubeSat) that launched 10km into space.",
+      li3: "•	Created a program using C++ to analyze and store the data from the satellite on an SD card, including data from a Geiger counter, which calculates nearby radiation in the satellite, saving 50% on data storage.",
+      width: 450,
       height: 150
     },
     {
       title: "IT Profiency from Google",
       url: "/images/google-icon.svg",
+      light_url: "/images/google-icon.svg",
       location: "Mount Wachusett Community College, Gardner, MA",
-      date: "12/2021 - 5/2022",
+      date: "December 2021 - May 2022",
       li1: "Mastered Coursera and learned fundamental skills about Information Technology",
       li2: "Larned strategies to make customer service as easy and helpful as possible for everyone using laguages like Python, Java, and C++",
       li3: "Practiced customer service skills with 50+ simulations about computer issues",
@@ -65,7 +70,9 @@ function ExpCard({ }: Props) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className=" relative rounded-full xl:h-32 xl:h-42 ">
-            <Image priority src={job.url}
+            <Image className='dark:hidden rounded-md' priority src={job.url}
+              alt="" width={job.width} height={job.height} />
+            <Image className="dark:block rounded-md" hidden priority src={job.light_url}
               alt="" width={job.width} height={job.height} />
           </motion.div>
 
@@ -77,6 +84,8 @@ function ExpCard({ }: Props) {
               <li>{job.li1}</li>
               <li>{job.li2}</li>
               <li>{job.li3}</li>
+              {job.li4 && 
+              <li>{job.li4}</li>}
             </ul>
           </div>
         </article>

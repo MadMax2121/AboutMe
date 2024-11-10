@@ -29,7 +29,7 @@ function Skills({ }: Props) {
         <Skill directionLeft={false} image={"/images/tailwindcss-icon.svg"} percent={"80%"} />
         <Skill directionLeft={true} image={"/images/react.svg"} percent={"90%"} />
         <Skill directionLeft={true} image={"/images/github-mark-white.svg"} percent={"100%"} />
-        <Skill directionLeft={false} image={"/images/firebase.svg"} percent={"90%"} />
+        <Skill directionLeft={false} image={"/images/docker-icon.svg"} percent={"90%"} />
 
       </div>
     </motion.div>
